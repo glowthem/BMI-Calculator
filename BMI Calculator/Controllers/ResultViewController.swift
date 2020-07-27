@@ -3,14 +3,19 @@ import UIKit
 class ResultViewController: UIViewController {
     
     var bmiValue: String? // calculate 뷰에서 계산하기 전까지는 bmi 지수를 알 수 없으므로 옵셔널이다.
+    var advice: String?
+    var color: UIColor?
 
     @IBOutlet weak var bmiLabel: UILabel!
     @IBOutlet weak var adviceLabel: UILabel!
+    @IBOutlet weak var backGround: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         bmiLabel.text = bmiValue
+        adviceLabel.text = advice
+        backGround.backgroundColor = color
     }
     
     @IBAction func recalculatePressed(_ sender: UIButton) {
